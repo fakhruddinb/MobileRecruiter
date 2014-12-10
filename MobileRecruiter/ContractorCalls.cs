@@ -19,7 +19,7 @@ namespace MobileRecruiter
 				callerPage = contractorPage;
 			UriBuilder addContractorURI = new UriBuilder (contractorDataUrl+ "/?agent=" + userName);
 			addContractorURI.Query = "&AgentId=" + WebUtility.HtmlEncode (userName) + WebUtility.HtmlEncode("&FirstName=Ankit&LastName=Sanghvi&Email=ankit.s.net@gmail.com&Phone=1234567890&AdditionalInformation=Nothing&InsertDate=2014-11-20T00:00:00");
-			HttpWebRequest addContractorRequest = (HttpWebRequest)WebRequest.Create (signUpURI.Uri);
+			HttpWebRequest addContractorRequest = (HttpWebRequest)WebRequest.Create (addContractorURI.Uri);
 
 			using (HttpWebResponse response = addContractorRequest.GetResponse () as HttpWebResponse) 
 				{
