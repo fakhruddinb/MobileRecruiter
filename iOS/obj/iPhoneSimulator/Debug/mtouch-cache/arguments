@@ -1,0 +1,33 @@
+# Version: 8.4.0.43 (840a925)
+# [first argument, ignore] # /Users/iSparrowLabs/Projects/MobileRecruiter/iOS/bin/iPhoneSimulator/Debug/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.4.0.43/bin/mtouch \
+	-sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--cache \
+	/Users/iSparrowLabs/Projects/MobileRecruiter/iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
+	--nomanifest \
+	--nosign \
+	-sim \
+	/Users/iSparrowLabs/Projects/MobileRecruiter/iOS/bin/iPhoneSimulator/Debug/MobileRecruiteriOS.app \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/monotouch.dll \
+	-r \
+	/Users/iSparrowLabs/Projects/MobileRecruiter/packages/Xamarin.Forms.1.2.3.6257/lib/MonoTouch10/Xamarin.Forms.Platform.iOS.dll \
+	-r \
+	/Users/iSparrowLabs/Projects/MobileRecruiter/packages/Xamarin.Forms.1.2.3.6257/lib/MonoTouch10/Xamarin.Forms.Core.dll \
+	-r \
+	/Users/iSparrowLabs/Projects/MobileRecruiter/packages/Xamarin.Forms.1.2.3.6257/lib/MonoTouch10/Xamarin.Forms.Xaml.dll \
+	-debug \
+	-nolink \
+	-sdk \
+	8.1 \
+	-targetver \
+	7.0 \
+	--abi=i386 \
+	/Users/iSparrowLabs/Projects/MobileRecruiter/iOS/bin/iPhoneSimulator/Debug/MobileRecruiteriOS.exe \
