@@ -7,12 +7,14 @@ using System.Text.RegularExpressions;
 
 
 
+
 public class SignUpPage: ContentPage
 {
 
 	private string _baseResource;
 	ActivityIndicator indicator;
 	Label networkLabel;
+	TapGestureRecognizer check;
 	public string BaseResource
 	{
 		get
@@ -42,7 +44,7 @@ public class SignUpPage: ContentPage
 	
 		this.Title = "Registration";
 
-
+		check = new TapGestureRecognizer ();
 		VerticalStack PageStack = new VerticalStack ();
 
 		VerticalStack FormStack = new VerticalStack ();
@@ -66,6 +68,7 @@ public class SignUpPage: ContentPage
 		TextLabel EmailLabel = new TextLabel ();
 		EmailLabel.Text = "Email";
 		TextField EmailField = new TextField ();
+		EmailField.Keyboard = Keyboard.Email;
 		EmailStack.Children.Add (EmailLabel);
 		EmailStack.Children.Add (EmailField);
 
@@ -94,6 +97,7 @@ public class SignUpPage: ContentPage
 		TextLabel PhoneLabel = new TextLabel ();
 		PhoneLabel.Text = "Phone";
 		TextField PhoneField = new TextField ();
+		PhoneField.Keyboard = Keyboard.Telephone;
 		PhoneStack.Children.Add (PhoneLabel);
 		PhoneStack.Children.Add (PhoneField);
 
@@ -104,11 +108,11 @@ public class SignUpPage: ContentPage
 		ConditionLabel.MinimumHeightRequest = 80;
 
 		CheckedBox AgreeImage = new CheckedBox ();
-
-		AgreeImage.Source = ImageSource.FromFile ("next.png");
+		AgreeImage.Source = ImageSource.FromFile ("Uncheck.png");
+		AgreeImage.GestureRecognizers.Add (check);
 		AgreeImage.WidthRequest = 30;
 		AgreeImage.HeightRequest = 30;
-
+	
 
 		ConditionStack.Children.Add (ConditionLabel);
 		ConditionStack.Children.Add (AgreeImage);
@@ -165,8 +169,16 @@ public class SignUpPage: ContentPage
 				{
 					flag =true;
 					EmailLabel.TextColor = Color.Black;
+					if(string.IsNullOrEmpty(FirstNameField.Text)||string.IsNullOrEmpty(LastNameField.Text)||string.IsNullOrEmpty(AgencyField.Text)||string.IsNullOrEmpty(PhoneField.Text))
+					{
+						flag = false;
+					}
 				}
-			if(flag == true)
+			if(AgreeImage.flag == false)
+			{
+				DisplayAlert("Terms & Conditions", "You need to Agree to the Terms & Conditions to Continue", "OK");
+			}
+			if(flag == true && AgreeImage.flag == true)
 			{
 				networkLabel.TextColor = Color.Blue;
 				indicator.IsRunning = true;
@@ -177,21 +189,26 @@ public class SignUpPage: ContentPage
 
 			}
 
-
-			
 		};
-
-
 
 		AccountHolder.Clicked += (object sender, System.EventArgs e) => 
 		{
 			this.Navigation.PushAsync (new SignInPage());
 		};
 
-
-
-
-
+		check.Tapped+= (object sender, EventArgs e) => 
+		{
+			if(AgreeImage.flag == false)
+			{
+				AgreeImage.flag = true;
+				AgreeImage.Source = ImageSource.FromFile ("Check.png");
+			}
+			else
+			{
+				AgreeImage.flag = false;
+				AgreeImage.Source = ImageSource.FromFile ("Uncheck.png");
+			}
+		};
 
 		FormStack.Children.Add (EmailStack);
 		FormStack.Children.Add (FirstNameStack);

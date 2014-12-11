@@ -19,20 +19,20 @@
     <Compile Include="$(MSBuildThisFileDirectory)ContractorCalls.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="$(MSBuildThisFileDirectory)next.png" />
-    <BundleResource Include="$(MSBuildThisFileDirectory)feature-img-02.jpg" />
-    <BundleResource Include="$(MSBuildThisFileDirectory)feature-img-05.jpg" />
-    <BundleResource Include="$(MSBuildThisFileDirectory)feature-img-06.jpg" />
-    <BundleResource Include="$(MSBuildThisFileDirectory)feature-img-07.jpg" />
-    <BundleResource Include="$(MSBuildThisFileDirectory)feature-img-16.jpg" />
-    <BundleResource Include="$(MSBuildThisFileDirectory)feature-img-18.jpg" />
-    <BundleResource Include="$(MSBuildThisFileDirectory)feature-img-20.jpg" />
-    <BundleResource Include="$(MSBuildThisFileDirectory)home-header.jpg" />
-    <BundleResource Include="$(MSBuildThisFileDirectory)recruitment-zone-header.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Accountancy-JPG.jpg" />
-    <None Include="$(MSBuildThisFileDirectory)APSCo Affiliate JPEG high res for printing.jpg" />
-    <None Include="$(MSBuildThisFileDirectory)menu-btn.png" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Accountancy-JPG.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\APSCo Affiliate JPEG high res for printing.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Check%402x.png" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\feature-img-02.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\feature-img-05.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\feature-img-06.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\feature-img-07.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\feature-img-16.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\feature-img-18.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\feature-img-20.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\home-header.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\menu-btn.png" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\next.png" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\recruitment-zone-header.jpg" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Uncheck%402x.png" />
   </ItemGroup>
 </Project>

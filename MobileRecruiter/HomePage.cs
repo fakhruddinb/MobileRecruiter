@@ -1,5 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
+using System.Net;
+using System.Threading.Tasks;
 
 namespace MobileRecruiter
 {
@@ -33,12 +35,12 @@ namespace MobileRecruiter
 			pageGrid.RowDefinitions.Add(row2);
 			pageGrid.RowDefinitions.Add (row3);
 
-			TapGestureRecognizer tap = new TapGestureRecognizer ();
+			TapGestureRecognizer imageTap = new TapGestureRecognizer ();
 
 
 			Image Refer = new Image ();
 			Refer.Source = ImageSource.FromFile ("home-header.jpg");
-			Refer.GestureRecognizers.Add (tap);
+			Refer.GestureRecognizers.Add (imageTap);
 			Button ReferButton = new Button ();
 			ReferButton.Text = "Refer A Contractor";
 
@@ -50,23 +52,27 @@ namespace MobileRecruiter
 			Image Contractors = new Image ();
 			Contractors.Source = ImageSource.FromFile ("feature-img-18.jpg");
 			pageGrid.Children.Add ((Contractors), 1, 0);
-			Contractors.GestureRecognizers.Add (tap);
+			Contractors.GestureRecognizers.Add (imageTap);
 
 			Image AmendDetails = new Image ();
 			AmendDetails.Source = ImageSource.FromFile ("recruitment-zone-header.jpg");
 			pageGrid.Children.Add ((AmendDetails), 0, 1);
+			AmendDetails.GestureRecognizers.Add (imageTap);
 
 			Image AboutUs = new Image ();
 			AboutUs.Source = ImageSource.FromFile ("feature-img-20.jpg");
 			pageGrid.Children.Add ((AboutUs), 1, 1);
+			AboutUs.GestureRecognizers.Add (imageTap);
 
 			Image Paycal = new Image ();
 			Paycal.Source = ImageSource.FromFile ("feature-img-02.jpg");
 			pageGrid.Children.Add ((Paycal), 0, 2);
+			Paycal.GestureRecognizers.Add (imageTap);
 
 			Image PayChart = new Image ();
 			PayChart.Source = ImageSource.FromFile ("feature-img-07.jpg");
-			pageGrid.Children.Add ((PayChart), 1, 2);s
+			pageGrid.Children.Add ((PayChart), 1, 2);
+			PayChart.GestureRecognizers.Add (imageTap);
 
 			VerticalStack ButtonStack = new VerticalStack ();
 			Button TermsButton = new Button ();
@@ -84,15 +90,37 @@ namespace MobileRecruiter
 			pageStack.Children.Add (pageGrid);
 			pageStack.Children.Add (ButtonStack);
 
-			tap.Tapped+= (object sender, EventArgs e) => 
+			imageTap.Tapped+= (object sender, EventArgs e) => 
 			{
 				if (object.Equals(sender,Refer))
 				{
-					Console.WriteLine("DEtected");
+					Console.WriteLine("Refer");
 				}
-				else
-					Console.WriteLine("DEtected222");
-				};
+				else if (object.Equals(sender,Contractors)) {
+					Console.WriteLine("Contractors");
+
+					NetworkCalls getAgentCall = new NetworkCalls();
+					string agent =   getAgentCall.GetAgent("hal@test.com");
+					//Send parse Request or start parsing to convert it into Agent Model Object
+				}
+				else if(object.Equals(sender,AmendDetails))
+				{
+					Console.WriteLine("AmendDetails");
+				}
+				else if(object.Equals(sender,AboutUs))
+				{
+					Console.WriteLine("AboutUs");
+				}
+				else if(object.Equals(sender,Paycal))
+				{
+					Console.WriteLine("Paycal");
+				}
+				else if(object.Equals(sender,PayChart))
+				{
+					Console.WriteLine("PayChart");
+				}
+
+			};
 
 			Content = pageStack;
 		}
