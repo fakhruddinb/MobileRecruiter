@@ -1,12 +1,10 @@
 ﻿<Properties GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MobileRecruiter/HomePage.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MobileRecruiter\Views\SignUpPage.cs">
     <Files>
-      <File FileName="MobileRecruiter/App.cs" Line="1" Column="1" />
-      <File FileName="MobileRecruiter/SignUpPage.cs" Line="18" Column="18" />
-      <File FileName="MobileRecruiter/SignInPage.cs" Line="3" Column="3" />
-      <File FileName="MobileRecruiter/NetworkCalls.cs" Line="6" Column="6" />
-      <File FileName="MobileRecruiter/HomePage.cs" Line="30" Column="30" />
+      <File FileName="MobileRecruiter\Views\SignUpPage.cs" Line="25" Column="25" />
+      <File FileName="MobileRecruiter\Views\HomePage.cs" Line="15" Column="15" />
+      <File FileName="e:\MobileRecruiter\MobileRecruiter\MobileRecruiter\DataService\NetworkCalls.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

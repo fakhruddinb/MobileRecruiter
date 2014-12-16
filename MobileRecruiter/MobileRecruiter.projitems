@@ -10,13 +10,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)SignInPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)NetworkCalls.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)SignUpPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)HomePage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AgentCalls.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ContractorPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ContractorCalls.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\SQLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\MobileRecruiterDatabase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Agent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Contractor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataService\AgentCalls.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataService\ContractorCalls.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataService\NetworkCalls.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ContractorPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\HomePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\SignInPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\SignUpPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MenuPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Assets\Accountancy-JPG.jpg" />
@@ -34,5 +39,12 @@
     <None Include="$(MSBuildThisFileDirectory)Assets\next.png" />
     <None Include="$(MSBuildThisFileDirectory)Assets\recruitment-zone-header.jpg" />
     <None Include="$(MSBuildThisFileDirectory)Assets\Uncheck%402x.png" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Churchill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Data\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DataService\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
   </ItemGroup>
 </Project>

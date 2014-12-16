@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="MobileRecruiter.Android">
   <uses-sdk android:minSdkVersion="16" />
   <application android:label="MobileRecruiter.Android" android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:configChanges="orientation|screenSize" android:label="MobileRecruiter.Android.Android" android:name="mobilerecruiter.android.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:label="MobileRecruiter" android:name="mobilerecruiter.android.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

@@ -13,7 +13,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace MobileRecruiter.Android
 {
-	[Activity (Label = "MobileRecruiter.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "MobileRecruiter", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : AndroidActivity
 	{
 		protected override void OnCreate (Bundle bundle)

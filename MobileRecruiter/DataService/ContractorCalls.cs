@@ -27,7 +27,7 @@ namespace MobileRecruiter
 				}
 					else 
 					{
-						//this.callerPage.UpdateUI (response.StatusCode.ToString());
+						this.callerPage.UpdateUI (response.StatusCode.ToString());
 					}
 				}
 				//			

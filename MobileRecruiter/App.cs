@@ -51,6 +51,7 @@ namespace MobileRecruiter
 			Spacing = 5;
 		}
 	}
+
 	public class TextField: Entry
 	{
 		public TextField()
@@ -69,19 +70,17 @@ namespace MobileRecruiter
 				Font = Font.SystemFontOfSize (14);
 			else
 				Font = Font.SystemFontOfSize (16);
+
 		}
 	}
+
 	public class App
 	{
-
-
 		public static Page GetMainPage ()
 		{
 			return new NavigationPage (new SignUpPage ());
 		
 		}
-
-
 
 	}
 }
